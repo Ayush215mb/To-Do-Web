@@ -9,12 +9,11 @@
     height: 100vh;
     background: linear-gradient(135deg, rgba(23, 54, 230, 0.969), rgba(61, 234, 211, 0.886));
     padding: 10px;
-
 }
 
 .face {
-    width: 100%;
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     background: rgb(255, 255, 255);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -29,7 +28,7 @@
 }
 
 .search input {
-    width: 70%;
+    width: 65%;
     padding: 10px;
     margin: 20px auto 10px;
     font-size: 16px;
@@ -46,17 +45,12 @@ button#addTaskBtn {
     border: 2px solid rgb(255, 255, 255);
 }
 
-
-.listItem{
+.listItem {
     list-style: none;
     display: flex;
     justify-content: space-between;
     font-size: larger;
 }
-
-
-
-
 
 button.delete-btn {
     cursor: pointer;
@@ -64,5 +58,58 @@ button.delete-btn {
     background-color: white;
     color: red;
     padding: 10px;
+}
 
+
+@media (max-width: 768px) {
+    .face {
+        width: 90%;
+        margin: 50px auto 20px;
+        padding: 30px 20px 50px;
+    }
+
+    .search input {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    button#addTaskBtn {
+        padding: 12px 18px;
+    }
+
+    .listItem {
+        font-size: medium;
+    }
+
+    button.delete-btn {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .face {
+        width: 95%;
+        margin: 30px auto 10px;
+        padding: 20px 15px 30px;
+    }
+
+    .search input {
+        width: 55%;
+        font-size: 12px;
+    }
+
+    button#addTaskBtn {
+        padding: 10px 16px;
+    }
+
+    .listItem {
+        font-size: medium;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button.delete-btn {
+        padding: 6px;
+        margin: 10px 0;
+    }
 }
